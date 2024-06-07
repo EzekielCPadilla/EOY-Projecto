@@ -38,8 +38,17 @@ public class GamePanel extends JPanel implements ActionListener{
 
     }
     public void paintComponent(Graphics g) {
+
         super.paintComponent(g);
+        Graphics2D g2 = (Graphics2D)g;
         draw(g);
+
+        int score = bodyParts - 6;
+
+
+        g2.setFont(new Font("Arial", Font.BOLD, 50));
+            g2.setColor(Color.white);
+            g2.drawString((String.valueOf(score)), 50, 50);
 
     }
     public void draw(Graphics g){
